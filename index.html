@@ -1,15 +1,18 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
   <title>Relaxed Brand</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: linear-gradient(
-  180deg,
-  #0b2d3b 0%,
-  #11475a 100%);
+        180deg,
+        #0b2d3b 0%,
+        #11475a 100%
+      );
       color: #fff4dc;
       text-align: center;
     }
@@ -19,7 +22,6 @@
       padding: 60px 20px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
     }
 
@@ -56,58 +58,90 @@
 
     .card {
       background: rgba(255,255,255,0.05);
-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
       border: 1px solid rgba(255,255,255,0.15);
       border-radius: 16px;
       padding: 24px;
       width: 240px;
     }
-    <div style="margin-top:80px; max-width:800px;">
-  <h2>Roadmap</h2>
 
-  <p>✅ Domain Purchased</p>
-  <p>✅ Website Online</p>
-  <p>✅ Discord Created</p>
+    .roadmap {
+      margin-top: 80px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 80px;
+    }
 
-  <p>🔄 First Product In Development</p>
-
-  <p>⬜ First Customer</p>
-  <p>⬜ First Revenue</p>
-  <p>⬜ LLC Formation</p>
-</div>
-    
+    .roadmap p {
+      font-size: 18px;
+      margin: 12px 0;
+    }
   </style>
 </head>
+
 <body>
 
   <section class="hero">
+
     <img src="Logo-pilot.png" alt="Relaxed Logo">
 
     <h1>Relaxed</h1>
-    <div class="tagline">Build. Play. Unwind.</div>
+
+    <div class="tagline">
+      Build. Play. Unwind.
+    </div>
 
     <p class="description">
-      Relaxed is a brand focused on digital products, gaming communities,
-      and lifestyle goods designed to help people create, connect, and relax.
+      Relaxed is a brand focused on digital products,
+      gaming communities, and lifestyle goods designed
+      to help people create, connect, and relax.
     </p>
 
     <div class="cards">
+
       <div class="card">
         <h2>Digital</h2>
-        <p>Software, tools, templates, apps, and online products.</p>
+        <p>
+          Software, tools, templates,
+          apps, and online products.
+        </p>
       </div>
 
       <div class="card">
         <h2>Gaming</h2>
-        <p>Communities, game projects, creators, and future events.</p>
+        <p>
+          Communities, game projects,
+          creators, and future events.
+        </p>
       </div>
 
       <div class="card">
         <h2>Lifestyle</h2>
-        <p>Comfort-focused goods, merch, and relaxed everyday products.</p>
+        <p>
+          Comfort-focused goods,
+          merch, and relaxed everyday products.
+        </p>
       </div>
+
     </div>
+
+    <div class="roadmap">
+      <h2>Roadmap</h2>
+
+      <p>✅ Domain Purchased</p>
+      <p>✅ Website Online</p>
+      <p>✅ Discord Created</p>
+
+      <p>🔄 First Product In Development</p>
+
+      <p>⬜ First Customer</p>
+      <p>⬜ First Revenue</p>
+      <p>⬜ LLC Formation</p>
+    </div>
+
   </section>
 
 </body>
 </html>
+```
