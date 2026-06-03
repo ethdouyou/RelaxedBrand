@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relaxed Brand</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -12,20 +19,21 @@
     }
 
     .hero {
-      padding: 70px 20px 40px;
+      padding: 50px 20px 30px;
     }
 
     .logo {
-      max-width: 420px;
-      width: 85%;
-      border-radius: 20px;
+      max-width: 360px;
+      width: 80%;
+      display: block;
+      margin: 0 auto 35px;
     }
 
     .tagline {
-      font-size: 32px;
-      margin-top: 20px;
-      letter-spacing: 3px;
+      font-size: 34px;
+      letter-spacing: 4px;
       color: #6fffe9;
+      margin-bottom: 22px;
     }
 
     .tagline span {
@@ -33,8 +41,8 @@
     }
 
     .description {
-      max-width: 700px;
-      margin: 20px auto;
+      max-width: 720px;
+      margin: 0 auto;
       font-size: 19px;
       line-height: 1.6;
       color: white;
@@ -42,22 +50,24 @@
 
     .cards {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 24px;
-      padding: 40px 20px;
+      flex-wrap: wrap;
+      padding: 70px 20px 40px;
     }
 
     .card {
-      width: 260px;
-      padding: 28px;
-      border-radius: 20px;
+      width: 280px;
+      min-height: 170px;
+      padding: 30px;
+      border-radius: 18px;
       background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(111,255,233,0.35);
+      border: 1px solid rgba(111,255,233,0.28);
     }
 
     .card h2 {
-      color: #fff4dc;
+      margin-top: 0;
+      font-size: 28px;
     }
 
     .card p {
@@ -66,16 +76,22 @@
     }
 
     .roadmap {
-      max-width: 700px;
-      margin: 30px auto 80px;
-      padding: 30px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.05);
+      max-width: 720px;
+      margin: 40px auto 90px;
+      padding: 35px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .roadmap h2 {
+      font-size: 30px;
+      margin-top: 0;
     }
 
     .roadmap p {
       font-size: 18px;
+      color: white;
     }
   </style>
 </head>
@@ -83,7 +99,7 @@
 <body>
 
   <section class="hero">
-    <img class="logo" src="updated-non-llc-logo.png" alt="Relaxed Logo">
+    <img class="logo" src="Logo-pilot.png" alt="Relaxed Logo">
 
     <div class="tagline">
       Build. <span>Play.</span> Unwind.
@@ -97,30 +113,30 @@
 
   <section class="cards">
     <div class="card">
-      <h2>💻 Digital</h2>
+      <h2>Digital</h2>
       <p>Software, tools, templates, apps, and online products.</p>
     </div>
 
     <div class="card">
-      <h2>🎮 Gaming</h2>
+      <h2>Gaming</h2>
       <p>Communities, game projects, creators, and future events.</p>
     </div>
 
     <div class="card">
-      <h2>🌴 Lifestyle</h2>
+      <h2>Lifestyle</h2>
       <p>Comfort-focused goods, merch, and relaxed everyday products.</p>
     </div>
   </section>
 
   <section class="roadmap">
     <h2>The Journey</h2>
-    <p>✅ Domain Purchased</p>
-    <p>✅ Website Online</p>
-    <p>✅ Discord Created</p>
-    <p>🔄 First Product In Development</p>
-    <p>⬜ First Customer</p>
-    <p>⬜ First Revenue</p>
-    <p>⬜ LLC Formation</p>
+    <p>DONE — Domain Purchased</p>
+    <p>DONE — Website Online</p>
+    <p>DONE — Discord Created</p>
+    <p>NOW — First Product In Development</p>
+    <p>NEXT — First Customer</p>
+    <p>NEXT — First Revenue</p>
+    <p>LATER — LLC Formation</p>
   </section>
 
 </body>
