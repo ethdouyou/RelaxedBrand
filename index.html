@@ -3,26 +3,125 @@
 <head>
   <title>Relaxed Brand</title>
   <style>
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      background: #061f2e;
-    }
-
     body {
-      background-image: url("Website-Pilot.png");
-      background-size: cover;
-      background-position: top center;
-      background-repeat: no-repeat;
+      margin: 0;
       font-family: Arial, sans-serif;
+      background: #071f2d;
+      color: #fff4dc;
+      text-align: center;
     }
 
-    .spacer {
-      height: 100vh;
+    .hero {
+      padding: 70px 20px 40px;
+    }
+
+    .logo {
+      max-width: 420px;
+      width: 85%;
+      border-radius: 20px;
+    }
+
+    .tagline {
+      font-size: 32px;
+      margin-top: 20px;
+      letter-spacing: 3px;
+      color: #6fffe9;
+    }
+
+    .tagline span {
+      color: #ff9f1c;
+    }
+
+    .description {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 19px;
+      line-height: 1.6;
+      color: white;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: 260px;
+      padding: 28px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(111,255,233,0.35);
+    }
+
+    .card h2 {
+      color: #fff4dc;
+    }
+
+    .card p {
+      color: white;
+      font-size: 17px;
+    }
+
+    .roadmap {
+      max-width: 700px;
+      margin: 30px auto 80px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .roadmap p {
+      font-size: 18px;
     }
   </style>
 </head>
+
 <body>
-  <div class="spacer"></div>
+
+  <section class="hero">
+    <img class="logo" src="Logo-pilot.png" alt="Relaxed Logo">
+
+    <div class="tagline">
+      Build. <span>Play.</span> Unwind.
+    </div>
+
+    <p class="description">
+      Relaxed is a brand focused on digital products, gaming communities,
+      and lifestyle goods designed to help people create, connect, and relax.
+    </p>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h2>💻 Digital</h2>
+      <p>Software, tools, templates, apps, and online products.</p>
+    </div>
+
+    <div class="card">
+      <h2>🎮 Gaming</h2>
+      <p>Communities, game projects, creators, and future events.</p>
+    </div>
+
+    <div class="card">
+      <h2>🌴 Lifestyle</h2>
+      <p>Comfort-focused goods, merch, and relaxed everyday products.</p>
+    </div>
+  </section>
+
+  <section class="roadmap">
+    <h2>The Journey</h2>
+    <p>✅ Domain Purchased</p>
+    <p>✅ Website Online</p>
+    <p>✅ Discord Created</p>
+    <p>🔄 First Product In Development</p>
+    <p>⬜ First Customer</p>
+    <p>⬜ First Revenue</p>
+    <p>⬜ LLC Formation</p>
+  </section>
+
 </body>
 </html>
