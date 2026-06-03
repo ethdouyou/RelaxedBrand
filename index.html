@@ -6,9 +6,7 @@
   <title>Relaxed Brand</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -19,11 +17,11 @@
     }
 
     .hero {
-      padding: 50px 20px 30px;
+      padding: 30px 20px 10px;
     }
 
     .logo {
-      max-width: 360px;
+      max-width: 500px;
       width: 80%;
       display: block;
       margin: 0 auto 35px;
@@ -36,9 +34,7 @@
       margin-bottom: 22px;
     }
 
-    .tagline span {
-      color: #ff9f1c;
-    }
+    .tagline span { color: #ff9f1c; }
 
     .description {
       max-width: 720px;
@@ -46,6 +42,25 @@
       font-size: 19px;
       line-height: 1.6;
       color: white;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 0 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      background: #ff9f1c;
+      font-weight: bold;
+    }
+
+    .btn-alt {
+      background: #0f3b52;
     }
 
     .cards {
@@ -93,6 +108,11 @@
       font-size: 18px;
       color: white;
     }
+
+    footer {
+      padding: 40px;
+      color: #8fb4c6;
+    }
   </style>
 </head>
 
@@ -109,6 +129,11 @@
       Relaxed is a brand focused on digital products, gaming communities,
       and lifestyle goods designed to help people create, connect, and relax.
     </p>
+
+    <div class="buttons">
+      <a href="#" class="btn">Join Discord</a>
+      <a href="#journey" class="btn btn-alt">Our Journey</a>
+    </div>
   </section>
 
   <section class="cards">
@@ -128,7 +153,7 @@
     </div>
   </section>
 
-  <section class="roadmap">
+  <section class="roadmap" id="journey">
     <h2>The Journey</h2>
     <p>DONE — Domain Purchased</p>
     <p>DONE — Website Online</p>
@@ -138,6 +163,10 @@
     <p>NEXT — First Revenue</p>
     <p>LATER — LLC Formation</p>
   </section>
+
+  <footer>
+    Relaxed Brand © 2026
+  </footer>
 
 </body>
 </html>
