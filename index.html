@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
 
   <meta
     name="description"
-    content="Relaxed Brand helps builders, traders, gamers, and creators launch communities, tools, and digital projects."
+    content="Relaxed Brand helps builders, traders, gamers, and creators launch communities, tools, rewards, and digital projects."
   />
 
   <title>Relaxed Brand</title>
@@ -356,18 +357,15 @@
       align-items: start;
     }
 
-   
-  .project-intro {
-    position: sticky;
-    top: 110px;
-    align-self: start;
-    padding: 30px;
-    border-radius: 24px;
-    background: rgba(255, 159, 28, 0.08);
-    border: 1px solid rgba(255, 159, 28, 0.24); 
-    }    
-
-
+    .project-intro {
+      position: sticky;
+      top: 110px;
+      align-self: start;
+      padding: 30px;
+      border-radius: 24px;
+      background: rgba(255, 159, 28, 0.08);
+      border: 1px solid rgba(255, 159, 28, 0.24);
+    }
 
     .project-intro h2 {
       margin: 0 0 12px;
@@ -406,6 +404,95 @@
       font-size: 16px;
       line-height: 1.6;
       color: var(--muted);
+    }
+
+    /* RELAXED CREDITS */
+
+    .credits-box {
+      padding: 36px;
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(111, 255, 233, 0.11), rgba(255, 159, 28, 0.10)),
+        rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(111, 255, 233, 0.26);
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.22);
+    }
+
+    .credits-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .credits-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .credits-box h2 {
+      margin: 0 0 14px;
+      font-size: clamp(32px, 4vw, 48px);
+      letter-spacing: -1.3px;
+    }
+
+    .credits-box p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .credits-motto {
+      margin: 22px 0;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(6, 25, 35, 0.55);
+      border: 1px solid rgba(255, 159, 28, 0.22);
+      color: var(--cream);
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .credits-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .credit-item {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(6, 25, 35, 0.52);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .credit-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--teal);
+      font-size: 17px;
+    }
+
+    .credit-item span {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .disclaimer {
+      margin-top: 20px !important;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255, 159, 28, 0.08);
+      border: 1px solid rgba(255, 159, 28, 0.22);
+      color: var(--cream) !important;
+      font-size: 14.5px !important;
     }
 
     /* SPONSOR / ADVERTISING SECTION */
@@ -558,29 +645,30 @@
     /* RESPONSIVE */
 
     @media (max-width: 1000px) {
-  .hero-grid,
-  .projects,
-  .ad-box {
-    grid-template-columns: 1fr;
-  }
+      .hero-grid,
+      .projects,
+      .credits-grid,
+      .ad-box {
+        grid-template-columns: 1fr;
+      }
 
-  .project-intro {
-    position: static;
-  }
+      .project-intro {
+        position: static;
+      }
 
-  .cards,
-  .roadmap {
-    grid-template-columns: repeat(2, 1fr);
-  }
+      .cards,
+      .roadmap {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-  .hero {
-    padding-top: 60px;
-  }
+      .hero {
+        padding-top: 60px;
+      }
 
-  .ad-actions {
-    justify-content: flex-start;
-  }
-}
+      .ad-actions {
+        justify-content: flex-start;
+      }
+    }
 
     @media (max-width: 700px) {
       .container {
@@ -612,6 +700,7 @@
       .hero-card,
       .simple-box,
       .project-intro,
+      .credits-box,
       .ad-box,
       .cta {
         padding: 24px;
@@ -646,6 +735,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#what-we-do">What We Do</a>
         <a href="#projects">Projects</a>
+        <a href="#credits">RXP</a>
         <a href="#advertise">Advertise</a>
         <a href="#journey">Journey</a>
         <a href="#join" class="nav-button">Join Discord</a>
@@ -667,7 +757,7 @@
           <p>
             Relaxed Brand helps builders, traders, gamers, and creators turn ideas
             into real digital projects — from Discord communities and landing pages
-            to trading tools, games, and digital products.
+            to trading tools, games, rewards, and digital products.
           </p>
 
           <div class="buttons">
@@ -693,7 +783,7 @@
 
           <p>
             Relaxed is building a community around digital products, trading,
-            gaming, and creative work — one useful project at a time.
+            gaming, creative work, and contribution-based rewards.
           </p>
         </aside>
       </div>
@@ -704,8 +794,8 @@
         <div class="simple-box">
           <p>
             Relaxed is for people building after work, learning new skills,
-            trading markets, gaming with friends, creating content, and trying to
-            turn ideas into something real.
+            trading markets, gaming with friends, creating content, helping others,
+            and trying to turn ideas into something real.
           </p>
         </div>
       </div>
@@ -717,7 +807,7 @@
           <h2>What We Do</h2>
           <p>
             Relaxed focuses on practical digital work that helps people launch,
-            organize, and grow.
+            organize, contribute, and grow.
           </p>
         </div>
 
@@ -797,12 +887,95 @@
           </article>
 
           <article class="project-item">
+            <strong>Relaxed Credits / RXP</strong>
+            <p>
+              A planned internal community reward system designed to recognize
+              helpful members, builders, creators, traders, gamers, and supporters.
+            </p>
+          </article>
+
+          <article class="project-item">
             <strong>Digital Products</strong>
             <p>
               Templates, trackers, tools, and resources for people who want to
               organize their work and improve faster.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="credits">
+      <div class="container">
+        <div class="credits-box">
+          <div class="credits-grid">
+            <div>
+              <span class="credits-label">Community Rewards</span>
+
+              <h2>Relaxed Credits</h2>
+
+              <p>
+                Relaxed Credits, also known as RXP, is a planned community reward
+                system for the Relaxed ecosystem.
+              </p>
+
+              <p>
+                RXP is being designed to reward members who contribute value through
+                building, learning, trading, creating, gaming, helping others, and
+                supporting the community.
+              </p>
+
+              <div class="credits-motto">
+                Earn it. Use it. Build with it.
+              </div>
+
+              <p>
+                Members will be able to earn RXP through meaningful participation,
+                helpful contributions, community challenges, marketplace activity,
+                events, and project support.
+              </p>
+
+              <p class="disclaimer">
+                Relaxed Credits will begin as an internal community points system.
+                It is not currently a cryptocurrency, investment product, stock,
+                security, or promise of financial return.
+              </p>
+            </div>
+
+            <div class="credits-list">
+              <div class="credit-item">
+                <strong>Earn RXP</strong>
+                <span>
+                  Contribute to the community, help members, join events, support
+                  projects, stay active, and create value.
+                </span>
+              </div>
+
+              <div class="credit-item">
+                <strong>Use RXP</strong>
+                <span>
+                  Planned uses may include Discord perks, badges, roles, event access,
+                  digital product discounts, and marketplace benefits.
+                </span>
+              </div>
+
+              <div class="credit-item">
+                <strong>Build First</strong>
+                <span>
+                  Before any public blockchain token is considered, Relaxed will focus
+                  on real utility, real products, clear rules, and community value.
+                </span>
+              </div>
+
+              <div class="credit-item">
+                <strong>No Speculation</strong>
+                <span>
+                  RXP is not designed around hype or promises of financial return.
+                  The goal is to reward contribution over speculation.
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -842,7 +1015,8 @@
           <h2>The Journey</h2>
           <p>
             Relaxed is early. The plan is to build in public, grow the community,
-            release useful products, and turn the brand into a real business.
+            release useful products, reward real contribution, and turn the brand
+            into a real business.
           </p>
         </div>
 
@@ -867,7 +1041,7 @@
             <span>Phase 03</span>
             <h3>Products</h3>
             <p>
-              Release templates, trading tools, digital resources, and project updates.
+              Release templates, trading tools, digital resources, rewards, and project updates.
             </p>
           </div>
 
@@ -889,8 +1063,9 @@
 
           <p>
             Relaxed is still early, and that is the point. Join the Discord,
-            follow the build, request a service, test early products, advertise
-            with the community, and be part of the brand from the beginning.
+            follow the build, request a service, test early products, earn future
+            community rewards, advertise with the community, and be part of the
+            brand from the beginning.
           </p>
 
           <div class="buttons">
@@ -928,6 +1103,7 @@
       <div class="footer-links">
         <a href="#what-we-do">What We Do</a>
         <a href="#projects">Projects</a>
+        <a href="#credits">RXP</a>
         <a href="#advertise">Advertise</a>
         <a href="#journey">Journey</a>
         <a href="https://discord.gg/AFA6haRnW" target="_blank" rel="noopener noreferrer">
@@ -939,3 +1115,4 @@
 
 </body>
 </html>
+```
