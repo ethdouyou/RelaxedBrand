@@ -11,6 +11,17 @@
 
   <title>Relaxed Brand</title>
 
+  <!--
+    FUTURE GOOGLE ADSENSE CODE GOES HERE AFTER APPROVAL.
+
+    Example only:
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ID"
+      crossorigin="anonymous">
+    </script>
+  -->
+
   <style>
     :root {
       --bg: #061923;
@@ -391,6 +402,52 @@
       color: var(--muted);
     }
 
+    /* SPONSOR / ADVERTISING SECTION */
+
+    .ad-box {
+      padding: 32px;
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(111, 255, 233, 0.12), rgba(255, 159, 28, 0.1)),
+        rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(111, 255, 233, 0.28);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.22);
+    }
+
+    .ad-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .ad-box h2 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -1px;
+    }
+
+    .ad-box p {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .ad-actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
     /* ROADMAP */
 
     .roadmap {
@@ -496,7 +553,8 @@
 
     @media (max-width: 1000px) {
       .hero-grid,
-      .projects {
+      .projects,
+      .ad-box {
         grid-template-columns: 1fr;
       }
 
@@ -507,6 +565,10 @@
 
       .hero {
         padding-top: 60px;
+      }
+
+      .ad-actions {
+        justify-content: flex-start;
       }
     }
 
@@ -540,6 +602,7 @@
       .hero-card,
       .simple-box,
       .project-intro,
+      .ad-box,
       .cta {
         padding: 24px;
       }
@@ -573,6 +636,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#what-we-do">What We Do</a>
         <a href="#projects">Projects</a>
+        <a href="#advertise">Advertise</a>
         <a href="#journey">Journey</a>
         <a href="#join" class="nav-button">Join Discord</a>
       </nav>
@@ -733,6 +797,35 @@
       </div>
     </section>
 
+    <section class="section" id="advertise">
+      <div class="container">
+        <div class="ad-box">
+          <div>
+            <span class="ad-label">Sponsored Slot</span>
+
+            <h2>Advertise with Relaxed</h2>
+
+            <p>
+              Promote your project, Discord server, trading tool, gaming community,
+              digital product, or creator brand to the Relaxed network. Sponsored
+              placements are available for brands that fit the community.
+            </p>
+          </div>
+
+          <div class="ad-actions">
+            <a
+              href="https://discord.gg/AFA6haRnW"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Request Ad Slot
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="journey">
       <div class="container">
         <div class="section-header">
@@ -786,8 +879,8 @@
 
           <p>
             Relaxed is still early, and that is the point. Join the Discord,
-            follow the build, request a service, test early products, and be part
-            of the community from the beginning.
+            follow the build, request a service, test early products, advertise
+            with the community, and be part of the brand from the beginning.
           </p>
 
           <div class="buttons">
@@ -825,6 +918,7 @@
       <div class="footer-links">
         <a href="#what-we-do">What We Do</a>
         <a href="#projects">Projects</a>
+        <a href="#advertise">Advertise</a>
         <a href="#journey">Journey</a>
         <a href="https://discord.gg/AFA6haRnW" target="_blank" rel="noopener noreferrer">
           Discord
