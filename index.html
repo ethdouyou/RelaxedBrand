@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Relaxed Brand is a digital-first brand building tools, communities, and systems for traders, creators, gamers, and builders." />
+
+  <meta
+    name="description"
+    content="Relaxed Brand helps builders, traders, gamers, and creators launch communities, tools, and digital projects."
+  />
+
   <title>Relaxed Brand</title>
 
   <style>
     :root {
-      --bg: #061823;
-      --bg-soft: #092536;
-      --panel: rgba(255, 255, 255, 0.07);
-      --panel-strong: rgba(255, 255, 255, 0.11);
+      --bg: #061923;
+      --bg2: #082434;
+      --card: rgba(255, 255, 255, 0.065);
+      --card2: rgba(255, 255, 255, 0.1);
       --border: rgba(255, 255, 255, 0.14);
-      --border-accent: rgba(111, 255, 233, 0.28);
-      --cream: #fff4dc;
-      --white: #ffffff;
-      --muted: #b9d0dc;
       --teal: #6fffe9;
       --orange: #ff9f1c;
-      --navy: #0f3b52;
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
-      --radius: 22px;
-      --max-width: 1120px;
+      --cream: #fff4dc;
+      --white: #ffffff;
+      --muted: #b7cbd6;
+      --dark: #041018;
+      --max: 1120px;
+      --radius: 20px;
     }
 
     * {
@@ -37,9 +40,9 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(111, 255, 233, 0.12), transparent 35%),
-        radial-gradient(circle at top right, rgba(255, 159, 28, 0.12), transparent 32%),
-        linear-gradient(180deg, #061823 0%, #071f2d 48%, #04131c 100%);
+        radial-gradient(circle at top left, rgba(111, 255, 233, 0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(255, 159, 28, 0.10), transparent 30%),
+        linear-gradient(180deg, var(--bg), var(--bg2), #041018);
       color: var(--cream);
     }
 
@@ -48,25 +51,27 @@
     }
 
     .container {
-      width: min(var(--max-width), calc(100% - 40px));
+      width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
     }
 
-    .navbar {
+    /* NAV */
+
+    .nav {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(6, 24, 35, 0.88);
+      z-index: 100;
+      background: rgba(6, 25, 35, 0.92);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(14px);
     }
 
     .nav-inner {
-      min-height: 76px;
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
     }
 
     .brand {
@@ -74,43 +79,41 @@
       align-items: center;
       gap: 12px;
       text-decoration: none;
-      font-weight: 800;
-      letter-spacing: 0.5px;
+      font-weight: 900;
     }
 
     .brand img {
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       object-fit: contain;
     }
 
-    .brand-text {
+    .brand-name {
       display: flex;
       flex-direction: column;
-      line-height: 1.1;
+      line-height: 1;
     }
 
-    .brand-text span:first-child {
-      font-size: 18px;
+    .brand-name span:first-child {
+      font-size: 19px;
       color: var(--cream);
     }
 
-    .brand-text span:last-child {
-      font-size: 12px;
+    .brand-name span:last-child {
+      margin-top: 5px;
+      font-size: 11px;
+      letter-spacing: 2px;
       color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 1.8px;
       text-transform: uppercase;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
       gap: 22px;
-      flex-wrap: wrap;
       font-size: 14px;
       color: var(--muted);
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -122,60 +125,59 @@
       color: var(--teal);
     }
 
-    .nav-cta {
-      color: #061823 !important;
-      background: var(--teal);
-      padding: 10px 16px;
+    .nav-button {
+      padding: 10px 15px;
       border-radius: 999px;
-      font-weight: 800;
+      background: var(--teal);
+      color: var(--dark) !important;
+      font-weight: 900;
     }
 
+    /* HERO */
+
     .hero {
-      padding: 92px 0 56px;
+      padding: 90px 0 56px;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 42px;
       align-items: center;
+      gap: 44px;
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      width: fit-content;
+      display: inline-block;
       padding: 8px 13px;
-      border: 1px solid var(--border-accent);
       border-radius: 999px;
+      border: 1px solid rgba(111, 255, 233, 0.35);
       background: rgba(111, 255, 233, 0.08);
       color: var(--teal);
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
-    .hero h1 {
-      max-width: 780px;
+    h1 {
       margin: 22px 0 18px;
-      color: var(--cream);
-      font-size: clamp(42px, 7vw, 78px);
-      line-height: 0.96;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 74px);
+      line-height: 0.98;
       letter-spacing: -3px;
+      color: var(--cream);
     }
 
-    .hero h1 span {
+    h1 span {
       color: var(--teal);
     }
 
-    .hero-copy {
-      max-width: 700px;
+    .hero p {
+      max-width: 680px;
       margin: 0;
-      color: var(--muted);
       font-size: 20px;
       line-height: 1.7;
+      color: var(--muted);
     }
 
     .buttons {
@@ -187,226 +189,180 @@
 
     .btn {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       min-height: 48px;
       padding: 13px 22px;
       border-radius: 12px;
-      border: 1px solid transparent;
       text-decoration: none;
-      font-weight: 800;
+      font-weight: 900;
       transition: 0.2s ease;
     }
 
     .btn-primary {
       background: var(--orange);
-      color: #071f2d;
-      box-shadow: 0 12px 30px rgba(255, 159, 28, 0.18);
+      color: var(--dark);
     }
 
     .btn-secondary {
       background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--border);
       color: var(--white);
-      border-color: var(--border);
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      opacity: 0.93;
+      opacity: 0.92;
     }
 
-    .hero-panel {
-      padding: 28px;
-      border-radius: var(--radius);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.05));
+    .hero-card {
+      padding: 32px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.07);
       border: 1px solid var(--border);
-      box-shadow: var(--shadow);
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+      text-align: center;
     }
 
-    .hero-logo {
+    .hero-card img {
       width: 100%;
-      max-width: 320px;
+      max-width: 330px;
       display: block;
-      margin: 0 auto 22px;
+      margin: 0 auto 24px;
     }
 
-    .panel-title {
-      margin: 0 0 18px;
-      color: var(--cream);
-      font-size: 22px;
-      text-align: center;
+    .hero-card h2 {
+      margin: 0 0 12px;
+      font-size: 25px;
     }
 
-    .status-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .status-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: rgba(6, 24, 35, 0.55);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .status-item strong {
-      color: var(--white);
-    }
-
-    .status-item span {
-      color: var(--teal);
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .trust-strip {
-      padding: 18px 0 70px;
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .trust-item {
-      padding: 18px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      text-align: center;
+    .hero-card p {
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.6;
       color: var(--muted);
-      font-weight: 700;
     }
 
-    .trust-item span {
-      color: var(--orange);
-    }
+    /* GENERAL SECTIONS */
 
     section {
-      scroll-margin-top: 100px;
+      scroll-margin-top: 95px;
     }
 
     .section {
-      padding: 40px 0;
+      padding: 52px 0;
     }
 
     .section-header {
       max-width: 760px;
-      margin: 0 auto 30px;
+      margin: 0 auto 32px;
       text-align: center;
     }
 
     .section-header h2 {
       margin: 0 0 12px;
-      font-size: clamp(30px, 4vw, 44px);
-      letter-spacing: -1px;
+      font-size: clamp(31px, 4vw, 46px);
+      letter-spacing: -1.3px;
       color: var(--cream);
     }
 
     .section-header p {
       margin: 0;
-      color: var(--muted);
       font-size: 18px;
       line-height: 1.65;
+      color: var(--muted);
     }
 
-    .mission-box {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 36px;
-      border-radius: var(--radius);
-      background: var(--panel);
-      border: 1px solid var(--border);
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-
-    .mission-box p {
-      margin: 0;
-      color: var(--white);
-      font-size: 20px;
-      line-height: 1.7;
-    }
-
-    .cards-grid {
+    .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
     .card {
-      min-height: 245px;
-      padding: 28px;
+      padding: 26px;
+      min-height: 235px;
       border-radius: var(--radius);
-      background: var(--panel);
+      background: var(--card);
       border: 1px solid var(--border);
       transition: 0.2s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      background: var(--panel-strong);
-      border-color: var(--border-accent);
+      background: var(--card2);
+      border-color: rgba(111, 255, 233, 0.32);
     }
 
-    .card-icon {
+    .icon {
       width: 44px;
       height: 44px;
       display: grid;
       place-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       border-radius: 13px;
-      background: rgba(111, 255, 233, 0.10);
-      border: 1px solid rgba(111, 255, 233, 0.20);
-      color: var(--teal);
+      background: rgba(111, 255, 233, 0.1);
+      border: 1px solid rgba(111, 255, 233, 0.25);
       font-size: 22px;
     }
 
     .card h3 {
-      margin: 0 0 12px;
+      margin: 0 0 11px;
+      font-size: 21px;
       color: var(--cream);
-      font-size: 23px;
     }
 
     .card p {
       margin: 0;
-      color: var(--muted);
       font-size: 16px;
       line-height: 1.6;
+      color: var(--muted);
     }
 
-    .split-section {
+    .simple-box {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 36px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.065);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .simple-box p {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.7;
+      color: var(--white);
+    }
+
+    /* PROJECTS */
+
+    .projects {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 0.85fr 1.15fr;
       gap: 26px;
       align-items: start;
     }
 
-    .side-panel {
-      position: sticky;
-      top: 110px;
+    .project-intro {
       padding: 30px;
-      border-radius: var(--radius);
+      border-radius: 24px;
       background: rgba(255, 159, 28, 0.08);
-      border: 1px solid rgba(255, 159, 28, 0.20);
+      border: 1px solid rgba(255, 159, 28, 0.24);
     }
 
-    .side-panel h2 {
+    .project-intro h2 {
       margin: 0 0 12px;
-      font-size: 36px;
+      font-size: 38px;
       letter-spacing: -1px;
     }
 
-    .side-panel p {
+    .project-intro p {
       margin: 0;
-      color: var(--muted);
       font-size: 17px;
       line-height: 1.65;
+      color: var(--muted);
     }
 
     .project-list {
@@ -414,81 +370,81 @@
       gap: 14px;
     }
 
-    .project-card {
+    .project-item {
       padding: 24px;
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.11);
+      background: var(--card);
+      border: 1px solid var(--border);
     }
 
-    .project-card strong {
+    .project-item strong {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 7px;
       color: var(--teal);
       font-size: 21px;
     }
 
-    .project-card p {
+    .project-item p {
       margin: 0;
-      color: var(--muted);
       font-size: 16px;
       line-height: 1.6;
+      color: var(--muted);
     }
+
+    /* ROADMAP */
 
     .roadmap {
       display: grid;
-      gap: 14px;
-      max-width: 900px;
-      margin: 0 auto;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
 
-    .roadmap-step {
-      display: grid;
-      grid-template-columns: 115px 1fr;
-      gap: 20px;
-      align-items: start;
+    .step {
       padding: 24px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.065);
+      border: 1px solid var(--border);
     }
 
-    .phase {
+    .step span {
+      display: block;
+      margin-bottom: 14px;
       color: var(--orange);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 900;
       letter-spacing: 1.4px;
       text-transform: uppercase;
     }
 
-    .roadmap-step h3 {
-      margin: 0 0 8px;
-      color: var(--cream);
+    .step h3 {
+      margin: 0 0 9px;
       font-size: 22px;
     }
 
-    .roadmap-step p {
+    .step p {
       margin: 0;
       color: var(--muted);
       line-height: 1.6;
+      font-size: 15.5px;
     }
 
+    /* CTA */
+
     .cta {
-      margin: 50px auto 0;
-      padding: 42px;
+      padding: 44px;
       border-radius: 28px;
       background:
         linear-gradient(135deg, rgba(111, 255, 233, 0.14), rgba(255, 159, 28, 0.12)),
         rgba(255, 255, 255, 0.07);
-      border: 1px solid var(--border-accent);
+      border: 1px solid rgba(111, 255, 233, 0.28);
       text-align: center;
-      box-shadow: var(--shadow);
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.25);
     }
 
     .cta h2 {
       margin: 0 0 12px;
-      font-size: clamp(30px, 4vw, 48px);
-      letter-spacing: -1.5px;
+      font-size: clamp(32px, 4vw, 48px);
+      letter-spacing: -1px;
     }
 
     .cta p {
@@ -503,19 +459,21 @@
       justify-content: center;
     }
 
+    /* FOOTER */
+
     footer {
-      padding: 44px 0;
+      margin-top: 60px;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       color: #8fb4c6;
       font-size: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      margin-top: 70px;
     }
 
     .footer-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      align-items: center;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
@@ -534,29 +492,27 @@
       color: var(--teal);
     }
 
-    @media (max-width: 920px) {
+    /* RESPONSIVE */
+
+    @media (max-width: 1000px) {
       .hero-grid,
-      .split-section {
+      .projects {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding-top: 56px;
-      }
-
-      .side-panel {
-        position: static;
-      }
-
-      .cards-grid,
-      .trust-grid {
+      .cards,
+      .roadmap {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        padding-top: 60px;
       }
     }
 
     @media (max-width: 700px) {
       .container {
-        width: min(100% - 28px, var(--max-width));
+        width: min(100% - 28px, var(--max));
       }
 
       .nav-inner {
@@ -566,7 +522,6 @@
       }
 
       .nav-links {
-        justify-content: flex-start;
         gap: 12px;
       }
 
@@ -574,30 +529,23 @@
         font-size: 13px;
       }
 
-      .nav-cta {
-        padding: 8px 12px;
-      }
-
-      .hero h1 {
+      h1 {
         letter-spacing: -1.8px;
       }
 
-      .hero-copy {
+      .hero p {
         font-size: 18px;
       }
 
-      .hero-panel,
-      .mission-box,
+      .hero-card,
+      .simple-box,
+      .project-intro,
       .cta {
         padding: 24px;
       }
 
-      .cards-grid,
-      .trust-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .roadmap-step {
+      .cards,
+      .roadmap {
         grid-template-columns: 1fr;
       }
 
@@ -611,22 +559,22 @@
 
 <body>
 
-  <header class="navbar">
+  <header class="nav">
     <div class="container nav-inner">
-      <a href="#home" class="brand" aria-label="Relaxed Brand home">
+      <a class="brand" href="#home" aria-label="Relaxed Brand home">
         <img src="updated-non-llc-logo.png" alt="Relaxed logo" />
-        <div class="brand-text">
+
+        <div class="brand-name">
           <span>Relaxed</span>
           <span>Brand</span>
         </div>
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#mission">Mission</a>
-        <a href="#services">Services</a>
+        <a href="#what-we-do">What We Do</a>
         <a href="#projects">Projects</a>
         <a href="#journey">Journey</a>
-        <a href="https://discord.gg/AFA6haRnW" class="nav-cta" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        <a href="#join" class="nav-button">Join Discord</a>
       </nav>
     </div>
   </header>
@@ -636,125 +584,103 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Digital Brand • Community • Tools</div>
+          <div class="eyebrow">Digital Projects • Community • Tools</div>
 
           <h1>
-            Build smarter. Trade better. Create with a <span>relaxed</span> mindset.
+            Build your community. Launch your project. <span>Stay relaxed.</span>
           </h1>
 
-          <p class="hero-copy">
-            Relaxed Brand is a digital-first brand building tools, communities,
-            and systems for traders, creators, gamers, and builders. We turn
-            side projects into real products through strategy, design, and community.
+          <p>
+            Relaxed Brand helps builders, traders, gamers, and creators turn ideas
+            into real digital projects — from Discord communities and landing pages
+            to trading tools, games, and digital products.
           </p>
 
           <div class="buttons">
-            <a href="https://discord.gg/AFA6haRnW" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-              Join the Community
+            <a
+              href="https://discord.gg/AFA6haRnW"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Discord
             </a>
 
-            <a href="#services" class="btn btn-secondary">
-              View Services
+            <a href="#what-we-do" class="btn btn-secondary">
+              See What We Do
             </a>
           </div>
         </div>
 
-        <aside class="hero-panel" aria-label="Relaxed Brand status panel">
-          <img class="hero-logo" src="updated-non-llc-logo.png" alt="Relaxed logo" />
+        <aside class="hero-card">
+          <img src="updated-non-llc-logo.png" alt="Relaxed logo" />
 
-          <h2 class="panel-title">Current Brand Status</h2>
+          <h2>Simple idea. Real projects.</h2>
 
-          <div class="status-list">
-            <div class="status-item">
-              <strong>Website</strong>
-              <span>Live</span>
-            </div>
-
-            <div class="status-item">
-              <strong>Discord</strong>
-              <span>Open</span>
-            </div>
-
-            <div class="status-item">
-              <strong>Products</strong>
-              <span>In Development</span>
-            </div>
-
-            <div class="status-item">
-              <strong>Services</strong>
-              <span>Available Soon</span>
-            </div>
-          </div>
+          <p>
+            Relaxed is building a community around digital products, trading,
+            gaming, and creative work — one useful project at a time.
+          </p>
         </aside>
-      </div>
-    </section>
-
-    <section class="trust-strip" aria-label="Brand focus areas">
-      <div class="container trust-grid">
-        <div class="trust-item"><span>01</span> Community</div>
-        <div class="trust-item"><span>02</span> Trading Tools</div>
-        <div class="trust-item"><span>03</span> Digital Products</div>
-        <div class="trust-item"><span>04</span> Gaming Projects</div>
       </div>
     </section>
 
     <section class="section" id="mission">
       <div class="container">
-        <div class="section-header">
-          <h2>What Relaxed Is</h2>
+        <div class="simple-box">
           <p>
-            Relaxed is built for people who are serious about growth, but do not
-            want to lose themselves in the process.
-          </p>
-        </div>
-
-        <div class="mission-box">
-          <p>
-            Relaxed is a brand for builders, traders, gamers, creators, and
-            entrepreneurs working to turn ideas into something real. From digital
-            products and trading systems to gaming projects and community spaces,
-            our mission is to build useful tools around discipline, creativity,
-            ownership, and long-term growth.
+            Relaxed is for people building after work, learning new skills,
+            trading markets, gaming with friends, creating content, and trying to
+            turn ideas into something real.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section" id="what-we-do">
       <div class="container">
         <div class="section-header">
-          <h2>Products & Services</h2>
+          <h2>What We Do</h2>
           <p>
-            Practical offers designed for people launching communities, brands,
-            trading systems, and digital projects.
+            Relaxed focuses on practical digital work that helps people launch,
+            organize, and grow.
           </p>
         </div>
 
-        <div class="cards-grid">
+        <div class="cards">
           <article class="card">
-            <div class="card-icon">📊</div>
-            <h3>Trading Journals & Trackers</h3>
+            <div class="icon">💬</div>
+            <h3>Community Setup</h3>
             <p>
-              Digital templates for trade logging, risk tracking, portfolio review,
-              prop firm challenges, and performance improvement.
+              Discord server structure, roles, permissions, onboarding channels,
+              staff sections, and launch-ready layouts.
             </p>
           </article>
 
           <article class="card">
-            <div class="card-icon">💬</div>
-            <h3>Discord Community Setup</h3>
+            <div class="icon">🌐</div>
+            <h3>Landing Pages</h3>
             <p>
-              Server structure, roles, permissions, onboarding channels, reaction
-              roles, staff areas, and launch-ready layouts.
+              Simple websites and brand pages for people launching a project,
+              group, service, or digital brand.
             </p>
           </article>
 
           <article class="card">
-            <div class="card-icon">🌐</div>
-            <h3>Website & Launch Pages</h3>
+            <div class="icon">📊</div>
+            <h3>Trading Tools</h3>
             <p>
-              Clean landing pages, brand wording, community links, and starter
-              websites for projects, groups, and digital brands.
+              Trading journals, portfolio trackers, prop firm challenge trackers,
+              and systems for reviewing performance.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🎮</div>
+            <h3>Gaming Projects</h3>
+            <p>
+              Community games, Roblox projects, gaming spaces, and digital
+              experiences built around strategy and fun.
             </p>
           </article>
         </div>
@@ -762,17 +688,25 @@
     </section>
 
     <section class="section" id="projects">
-      <div class="container split-section">
-        <div class="side-panel">
-          <h2>What We’re Building</h2>
+      <div class="container projects">
+        <div class="project-intro">
+          <h2>Current Projects</h2>
           <p>
-            Relaxed is starting with practical digital projects and expanding into
-            a full ecosystem across tools, community, gaming, and brand goods.
+            These are the main projects being built under the Relaxed brand right now.
+            The goal is to start simple, prove ideas, and keep improving.
           </p>
         </div>
 
         <div class="project-list">
-          <article class="project-card">
+          <article class="project-item">
+            <strong>Relaxed Community</strong>
+            <p>
+              A Discord hub for builders, traders, gamers, creators, sellers,
+              and early supporters of the brand.
+            </p>
+          </article>
+
+          <article class="project-item">
             <strong>CoinBux</strong>
             <p>
               A market-based trading simulator designed to teach strategy, risk,
@@ -780,7 +714,7 @@
             </p>
           </article>
 
-          <article class="project-card">
+          <article class="project-item">
             <strong>TradeOS</strong>
             <p>
               A planned trading workflow system for journaling, risk tracking,
@@ -788,42 +722,13 @@
             </p>
           </article>
 
-          <article class="project-card">
-            <strong>Relaxed Community</strong>
-            <p>
-              A Discord-based hub for builders, traders, gamers, creators, and
-              early supporters of the Relaxed brand.
-            </p>
-          </article>
-
-          <article class="project-card">
+          <article class="project-item">
             <strong>Digital Products</strong>
             <p>
-              Templates, trackers, tools, and resources built for people who want
-              to improve, organize, and grow.
+              Templates, trackers, tools, and resources for people who want to
+              organize their work and improve faster.
             </p>
           </article>
-
-          <article class="project-card">
-            <strong>Brand Goods</strong>
-            <p>
-              Future comfort-focused products, merch, and everyday goods built
-              around the Relaxed identity.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="who">
-      <div class="container">
-        <div class="section-header">
-          <h2>Who It’s For</h2>
-          <p>
-            Relaxed is for people building after work, learning new skills,
-            trading markets, making content, gaming with friends, starting side
-            projects, and trying to turn ideas into something real.
-          </p>
         </div>
       </div>
     </section>
@@ -833,81 +738,74 @@
         <div class="section-header">
           <h2>The Journey</h2>
           <p>
-            The brand is early by design. The goal is to build in public, improve
-            with feedback, and grow one phase at a time.
+            Relaxed is early. The plan is to build in public, grow the community,
+            release useful products, and turn the brand into a real business.
           </p>
         </div>
 
         <div class="roadmap">
-          <div class="roadmap-step">
-            <div class="phase">Phase 01</div>
-            <div>
-              <h3>Foundation</h3>
-              <p>
-                Domain, website, brand identity, and Discord community launched.
-              </p>
-            </div>
+          <div class="step">
+            <span>Phase 01</span>
+            <h3>Foundation</h3>
+            <p>
+              Launch the website, Discord, brand identity, and basic structure.
+            </p>
           </div>
 
-          <div class="roadmap-step">
-            <div class="phase">Phase 02</div>
-            <div>
-              <h3>Community</h3>
-              <p>
-                Grow the Relaxed network with builders, traders, gamers, creators,
-                and trusted members.
-              </p>
-            </div>
+          <div class="step">
+            <span>Phase 02</span>
+            <h3>Community</h3>
+            <p>
+              Bring in builders, traders, gamers, creators, sellers, and trusted members.
+            </p>
           </div>
 
-          <div class="roadmap-step">
-            <div class="phase">Phase 03</div>
-            <div>
-              <h3>Products</h3>
-              <p>
-                Release digital products, trading tools, templates, and community
-                resources.
-              </p>
-            </div>
+          <div class="step">
+            <span>Phase 03</span>
+            <h3>Products</h3>
+            <p>
+              Release templates, trading tools, digital resources, and project updates.
+            </p>
           </div>
 
-          <div class="roadmap-step">
-            <div class="phase">Phase 04</div>
-            <div>
-              <h3>Revenue</h3>
-              <p>
-                Launch the first customer-facing offers and begin turning the brand
-                into a real business engine.
-              </p>
-            </div>
-          </div>
-
-          <div class="roadmap-step">
-            <div class="phase">Phase 05</div>
-            <div>
-              <h3>Company</h3>
-              <p>
-                Expand Relaxed into a long-term brand ecosystem across digital
-                products, gaming, community, and lifestyle goods.
-              </p>
-            </div>
+          <div class="step">
+            <span>Phase 04</span>
+            <h3>Revenue</h3>
+            <p>
+              Turn useful services and products into a real business engine.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="cta" id="join">
+    <section class="section" id="join">
+      <div class="container">
+        <div class="cta">
           <h2>Join the Foundation</h2>
+
           <p>
             Relaxed is still early, and that is the point. Join the Discord,
-            follow the journey, test early products, request services, and be part
-            of the brand while it grows from an idea into a real community and business.
+            follow the build, request a service, test early products, and be part
+            of the community from the beginning.
           </p>
 
           <div class="buttons">
-            <a href="https://discord.gg/AFA6haRnW" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://discord.gg/AFA6haRnW"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Join Discord
             </a>
 
-            <a href="https://discord.gg/AFA6haRnW" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://discord.gg/AFA6haRnW"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Request a Service
             </a>
           </div>
@@ -925,11 +823,12 @@
       </div>
 
       <div class="footer-links">
-        <a href="#mission">Mission</a>
-        <a href="#services">Services</a>
+        <a href="#what-we-do">What We Do</a>
         <a href="#projects">Projects</a>
         <a href="#journey">Journey</a>
-        <a href="https://discord.gg/AFA6haRnW" target="_blank" rel="noopener noreferrer">Discord</a>
+        <a href="https://discord.gg/AFA6haRnW" target="_blank" rel="noopener noreferrer">
+          Discord
+        </a>
       </div>
     </div>
   </footer>
