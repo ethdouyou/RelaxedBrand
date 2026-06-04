@@ -552,25 +552,29 @@
     /* RESPONSIVE */
 
     @media (max-width: 1000px) {
-      .hero-grid,
-      .projects,
-      .ad-box {
-        grid-template-columns: 1fr;
-      }
+  .hero-grid,
+  .projects,
+  .ad-box {
+    grid-template-columns: 1fr;
+  }
 
-      .cards,
-      .roadmap {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  .project-intro {
+    position: static;
+  }
 
-      .hero {
-        padding-top: 60px;
-      }
+  .cards,
+  .roadmap {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-      .ad-actions {
-        justify-content: flex-start;
-      }
-    }
+  .hero {
+    padding-top: 60px;
+  }
+
+  .ad-actions {
+    justify-content: flex-start;
+  }
+}
 
     @media (max-width: 700px) {
       .container {
