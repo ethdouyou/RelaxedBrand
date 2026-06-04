@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -541,6 +540,144 @@
       align-items: center;
     }
 
+
+
+    /* TREASURY DASHBOARD */
+
+    .treasury-section {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .treasury-heading {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      text-align: center;
+    }
+
+    .treasury-heading .eyebrow {
+      margin-bottom: 14px;
+    }
+
+    .treasury-heading h2 {
+      margin: 0 0 12px;
+      color: var(--cream);
+      font-size: clamp(31px, 4vw, 46px);
+      letter-spacing: -1.3px;
+    }
+
+    .treasury-heading p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .treasury-total-card {
+      padding: 30px;
+      margin-bottom: 24px;
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(111, 255, 233, 0.12), rgba(255, 159, 28, 0.08)),
+        rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(111, 255, 233, 0.28);
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.22);
+      text-align: center;
+    }
+
+    .treasury-total-card span {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .treasury-total-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--teal);
+      font-size: clamp(38px, 6vw, 58px);
+      letter-spacing: -1.8px;
+    }
+
+    .treasury-total-card small {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .treasury-table-wrap {
+      overflow-x: auto;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.065);
+      border: 1px solid var(--border);
+    }
+
+    .treasury-table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+    }
+
+    .treasury-table th,
+    .treasury-table td {
+      padding: 17px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .treasury-table th {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+    }
+
+    .treasury-table td {
+      color: var(--cream);
+      font-size: 15.5px;
+    }
+
+    .treasury-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .asset-symbol {
+      display: block;
+      color: var(--teal);
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .asset-name {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    .change-positive {
+      color: var(--teal) !important;
+      font-weight: 900;
+    }
+
+    .change-negative {
+      color: var(--orange) !important;
+      font-weight: 900;
+    }
+
+    .treasury-note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
     /* ROADMAP */
 
     .roadmap {
@@ -737,6 +874,7 @@
         <a href="#projects">Projects</a>
         <a href="#credits">RXP</a>
         <a href="#advertise">Advertise</a>
+        <a href="#treasury">Treasury</a>
         <a href="#journey">Journey</a>
         <a href="#join" class="nav-button">Join Discord</a>
       </nav>
@@ -1009,6 +1147,53 @@
       </div>
     </section>
 
+
+
+    <section class="section" id="treasury">
+      <div class="container">
+        <div class="treasury-section">
+          <div class="treasury-heading">
+            <span class="eyebrow">Live Treasury</span>
+            <h2>Relaxed LLC Treasury Dashboard</h2>
+            <p>
+              A live snapshot of Relaxed LLC holdings, estimated market value,
+              allocation, and 24-hour movement.
+            </p>
+          </div>
+
+          <div class="treasury-total-card">
+            <span>Total Treasury Value</span>
+            <strong id="treasuryTotal">$0.00</strong>
+            <small id="treasuryUpdated">Loading treasury data...</small>
+          </div>
+
+          <div class="treasury-table-wrap">
+            <table class="treasury-table">
+              <thead>
+                <tr>
+                  <th>Asset</th>
+                  <th>Amount</th>
+                  <th>Price</th>
+                  <th>Value</th>
+                  <th>Allocation</th>
+                  <th>24h</th>
+                </tr>
+              </thead>
+              <tbody id="treasuryRows">
+                <tr>
+                  <td colspan="6">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="treasury-note">
+            Treasury values are estimated from live market data and may update as prices move.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="journey">
       <div class="container">
         <div class="section-header">
@@ -1105,6 +1290,7 @@
         <a href="#projects">Projects</a>
         <a href="#credits">RXP</a>
         <a href="#advertise">Advertise</a>
+        <a href="#treasury">Treasury</a>
         <a href="#journey">Journey</a>
         <a href="https://discord.gg/AFA6haRnW" target="_blank" rel="noopener noreferrer">
           Discord
@@ -1113,6 +1299,110 @@
     </div>
   </footer>
 
+
+
+  <script>
+    const TREASURY_API_URL = "https://relaxed-treasury-api.ethandyoung23.workers.dev/treasury";
+
+    const moneyFormatter = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD"
+    });
+
+    const amountFormatter = new Intl.NumberFormat("en-US", {
+      maximumFractionDigits: 8
+    });
+
+    function formatPrice(value) {
+      const number = Number(value || 0);
+
+      if (number > 0 && number < 1) {
+        return "$" + number.toFixed(6);
+      }
+
+      return moneyFormatter.format(number);
+    }
+
+    function formatChange(value) {
+      const number = Number(value || 0);
+      const sign = number > 0 ? "+" : "";
+      return sign + number.toFixed(2) + "%";
+    }
+
+    function formatUpdatedTime(value) {
+      if (!value) {
+        return "Last updated: unavailable";
+      }
+
+      return "Last updated: " + new Date(value).toLocaleString("en-US", {
+        timeZone: "America/Chicago",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        timeZoneName: "short"
+      });
+    }
+
+    async function loadTreasuryDashboard() {
+      const totalEl = document.getElementById("treasuryTotal");
+      const updatedEl = document.getElementById("treasuryUpdated");
+      const rowsEl = document.getElementById("treasuryRows");
+
+      if (!totalEl || !updatedEl || !rowsEl) {
+        return;
+      }
+
+      try {
+        const response = await fetch(TREASURY_API_URL, { cache: "no-store" });
+
+        if (!response.ok) {
+          throw new Error("Treasury API returned " + response.status);
+        }
+
+        const data = await response.json();
+        const assets = Array.isArray(data.assets) ? data.assets : [];
+
+        totalEl.textContent = moneyFormatter.format(Number(data.total || 0));
+        updatedEl.textContent = formatUpdatedTime(data.lastUpdated);
+        rowsEl.innerHTML = "";
+
+        if (assets.length === 0) {
+          rowsEl.innerHTML = '<tr><td colspan="6">No treasury assets found.</td></tr>';
+          return;
+        }
+
+        assets.forEach((asset) => {
+          const change = Number(asset.change24hPercent || 0);
+          const allocation = Number(asset.allocationPercent || 0);
+          const changeClass = change >= 0 ? "change-positive" : "change-negative";
+          const row = document.createElement("tr");
+
+          row.innerHTML = `
+            <td>
+              <span class="asset-symbol">${asset.symbol || "—"}</span>
+              <span class="asset-name">${asset.name || ""}</span>
+            </td>
+            <td>${amountFormatter.format(Number(asset.amount || 0))}</td>
+            <td>${formatPrice(asset.price)}</td>
+            <td>${moneyFormatter.format(Number(asset.value || 0))}</td>
+            <td>${allocation.toFixed(2)}%</td>
+            <td class="${changeClass}">${formatChange(change)}</td>
+          `;
+
+          rowsEl.appendChild(row);
+        });
+      } catch (error) {
+        updatedEl.textContent = "Treasury dashboard failed to load.";
+        rowsEl.innerHTML = '<tr><td colspan="6">Unable to load treasury data right now.</td></tr>';
+        console.error(error);
+      }
+    }
+
+    loadTreasuryDashboard();
+    setInterval(loadTreasuryDashboard, 60000);
+  </script>
+
 </body>
 </html>
-
